@@ -45,11 +45,19 @@ public class JavaApplication11 {
                 System.out.println("it is hot!");
                 break;
      }
+        public static boolean isSeason(String myStr){
+            if (myStr == "SUMMER" || myStr == "WINTER" || myStr == "FALL" || myStr == "SPRING"){
+             return true;
+            }else return false;
+        }
     }
+    import java.util.Scanner;
     public static void main(String[] args) {
-        // TODO code application logic here
-        // try to get the input (myStr) from the user
-        String myStr= "SUMMER";
+       
+       Scanner in = new Scanner(System.in); 
+        
+        System.out.println("Enter Season in UPPERCASE: ");
+        String myStr = in.next();
         JavaApplication11 test1= new JavaApplication11(Seasons.valueOf(myStr));
         test1.seasonDescription();
         //test1.isSeason();
